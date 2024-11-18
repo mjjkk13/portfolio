@@ -92,7 +92,7 @@ Asegúrate de tener instalados en tu máquina:
    ```
 
 4. **Configura el middleware y Nodemailer en el servidor:**
-   En el archivo principal del servidor (`server.js` o similar), asegúrate de incluir lo siguiente:
+   En el archivo principal del servidor (`send-email.js` o similar), asegúrate de incluir lo siguiente:
 
    ```javascript
    const express = require('express');
@@ -149,7 +149,7 @@ Asegúrate de tener instalados en tu máquina:
 
 ### **3. Integración Cliente-Servidor**
 
-1. En el cliente, asegúrate de que las solicitudes apunten al backend configurado. Por ejemplo, en el archivo `services/api.js`:
+1. En el cliente, asegúrate de que las solicitudes apunten al backend configurado. Por ejemplo, en el archivo `components/Contact.jsx`:
    ```
    javascript
    import axios from 'axios';
