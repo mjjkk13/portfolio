@@ -23,16 +23,17 @@ app.post("/send-email", async (req, res) => {
       from: "marianajimenezv2006@gmail.com",
       to: "marianajimenezv2006@gmail.com",
       subject,
-      text: `Nombre: ${name}\nEmail: ${email}\n\n${text}`,
+      text: `Name: ${name}\nEmail: ${email}\n\n${text}`,
     });
 
-    res.status(200).send({ message: "Correo enviado con éxito" });
+    res.status(200).send("Email sent successfully");
   } catch (error) {
-    console.error(error);
-    res.status(500).send({ message: "Error al enviar el correo" });
+    console.error("Error sending email:", error);
+    res.status(500).send("Error sending email");
   }
 });
 
-app.listen(5000, () => {
-  console.log("Servidor ejecutándose en http://localhost:5173");
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
