@@ -26,10 +26,10 @@ app.post("/send-email", async (req, res) => {
       text: `Name: ${name}\nEmail: ${email}\n\n${text}`,
     });
 
-    res.status(200).send("Email sent successfully");
+    res.status(200).send("Message sent successfully");
   } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).send("Error sending email");
+    console.error("Error sending Message:", error);
+    res.status(500).send("Error sending Message");
   }
 });
 

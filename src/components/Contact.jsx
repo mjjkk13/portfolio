@@ -24,7 +24,7 @@ const Contact = () => {
       const response = await axios.post("http://localhost:5000/send-email", emailData);
       Swal.fire({
       icon: 'success',
-      title: 'Correo enviado',
+      title: 'Mensaje enviado',
       text: response.data.message,
       });
     } catch (error) {
@@ -32,7 +32,7 @@ const Contact = () => {
       Swal.fire({
       icon: 'error',
       title: 'Error',
-      text: 'Error al enviar el correo',
+      text: 'Error al enviar el Mensaje',
       });
     }
   };
