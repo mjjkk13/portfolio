@@ -1,36 +1,39 @@
-// api/send-email.js
+import express from "express";
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-import process from "process";
+import cors from "cors";
+import bodyParser from "body-parser";
 
-dotenv.config();
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
 
-export default async function handler(req, res) {
-  if (req.method === "POST") {
-    const { name, email, subject, text } = req.body;
+app.post("/send-email", async (req, res) => {
+  const { name, email, subject, text } = req.body;
 
-    try {
-      const transporter = nodemailer.createTransport({
-        service: process.env.SMTP_HOST,
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS, // Utiliza una contraseña de aplicación si usas Gmail
-        },
-      });
+  try {
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'marianajimenezv2006@gmail.com',
+        pass: 'twctsncdzzsxtedh', // Utiliza una contraseña de aplicación si usas Gmail
+      },
+    });
 
-      await transporter.sendMail({
-        from: process.env.SMTP_USER,
-        to: process.env.SMTP_USER,
-        subject,
-        text: `Name: ${name}\nEmail: ${email}\n\n${text}`,
-      });
+    await transporter.sendMail({
+      from: 'marianajimenezv2006@gmail.com',
+      to: 'marianajimenezv2006@gmail.com',
+      subject,
+      text: `Name: ${name}\nEmail: ${email}\n\n${text}`,
+    });
 
-      res.status(200).send("Email sent successfully");
-    } catch (error) {
-      console.error("Error sending email:", error);
-      res.status(500).send("Error sending email");
-    }
-  } else {
-    res.status(405).send("Method Not Allowed");
+    res.status(200).send("Email sent successfully");
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).send("Error sending email");
   }
-}
+});
+
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

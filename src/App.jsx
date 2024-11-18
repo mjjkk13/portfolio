@@ -12,7 +12,7 @@ function App() {
   
   return (
     <>
-    <Router>
+    <Router basename='/portfolio'>
       <div className='min-h-screen bg-base-100'>
         <Navbar/>
         <main>
