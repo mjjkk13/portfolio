@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://your-render-server-url/send-email", emailData);
+      const response = await axios.post("http://localhost:5173/send-email", emailData);
       Swal.fire({
       icon: 'success',
       title: 'Correo enviado',
