@@ -183,17 +183,6 @@ Asegúrate de tener instalados en tu máquina:
 - `npm start`: Inicia el servidor en modo producción.
 
 ---
-
-## Despliegue
-
-### Cliente:
-- Despliega en servicios como **Netlify** o **Vercel**.
-
-### Servidor:
-- Despliega en plataformas como **Render**, **Heroku** o cualquier VPS.
-
----
-
 ## Contribución
 
 1. Haz un fork del proyecto.
