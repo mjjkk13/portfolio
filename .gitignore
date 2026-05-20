@@ -23,4 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 node_modules
-"sendgrid.env" 
+"sendgrid.env"
+
+# Variables de entorno — NUNCA subir al repositorio
+.env
+.env.local
+.env.production
+api/.env
