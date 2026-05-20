@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden ring-4 ring-primary/30 ring-offset-4 ring-offset-base-100 shadow-2xl">
                 <img
-                  src="./foto.jpg"
+                  src="./foto.jpeg"
                   alt="Mariana Jiménez Villa"
                   className="w-full h-full object-cover"
                 />
