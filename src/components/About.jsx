@@ -15,7 +15,7 @@ const About = () => {
           <div className="md:col-span-2 flex justify-center">
             <div className="relative">
               <div className="w-64 h-72 rounded-2xl overflow-hidden shadow-2xl">
-                <img src="./foto.jpg" alt="Mariana Jiménez" className="w-full h-full object-cover" />
+                <img src="./foto.jpeg" alt="Mariana Jiménez" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-64 h-72 border-2 border-primary/30 rounded-2xl -z-10" />
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-secondary/10 rounded-xl -z-10 blur-sm" />
@@ -24,9 +24,10 @@ const About = () => {
 
           <div className="md:col-span-3 space-y-5">
             <p className="text-base-content/80 text-lg leading-relaxed">
-              Aprendiz en formación del programa Tecnólogo en análisis y desarrollo de software del SENA.
-              Con conocimientos sólidos en programación y desarrollo web, poseo experiencia en lenguajes como
-              Python, PHP y JavaScript. Además, cuento con una certificación en Técnico en programación de software.
+              Tecnóloga en Análisis y Desarrollo de Software con experiencia en soporte técnico de primer nivel y desarrollo de soluciones digitales internas. 
+              Actualmente me desempeño como Auxiliar Digital en BIMEDCO, brindando soporte a usuarios, automatizando procesos y apoyando el mantenimiento de plataformas web. 
+              Conocimientos solidos en JavaScript, PHP, TypeScript, .NET, Node.js, React, SQL Server y MySQL. 
+              Pronto inicio estudios universitarios en Ingeniería en Ciencia de Datos (ingreso a 4.o semestre en agosto de 2026).
             </p>
             <p className="text-base-content/80 text-lg leading-relaxed">
               Me apasiona el desarrollo de software y la resolución de problemas complejos. Siempre estoy aprendiendo
@@ -42,7 +43,7 @@ const About = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <a href="./cv.pdf" download className="btn btn-primary rounded-full gap-2">
+              <a href="./Mariana_Jimenez_CV.pdf" download className="btn btn-primary rounded-full gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
